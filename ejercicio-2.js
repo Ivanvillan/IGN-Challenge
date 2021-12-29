@@ -33,4 +33,4 @@ function ejercicio2(numero) {
 	}
 }
 
-ejercicio2(3);
+ejercicio2(12345);
