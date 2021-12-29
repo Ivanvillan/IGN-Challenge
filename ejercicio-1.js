@@ -4,39 +4,39 @@ function calcular_daño(tp, tpo, pa, pao) {
   const TIPO_PERSONAJES = {
     fuego: (pa, tpo, pao) => {
       if (tpo === 'agua') 
-        return 50 * (pa / pao) * 0.5;
+        return 50 * (pa / pao) * 0.5 + ' => Ataque no muy efectivo';
       if (tpo === 'hierba') 
-        return 50 * (pa / pao) * 2;
+        return 50 * (pa / pao) * 2 + ' => Ataque muy efectivo';
       if (tpo === 'electrico') 
-        return 50 * (pa / pao) * 1;
+        return 50 * (pa / pao) * 1 + ' => Ataque neutral';
       if (tpo)
-        return 50 * (pa / pao) * 0.5;
+        return 50 * (pa / pao) * 0.5 + ' => Ataque no muy efectivo';
     },
     agua: (pa, tpo, pao) => {
       if (tpo === 'hierba' || tpo === 'electrico') 
-        return 50 * (pa / pao) * 0.5;
+        return 50 * (pa / pao) * 0.5 + ' => Ataque no muy efectivo';
       if (tpo === 'fuego')
-        return 50 * (pa / pao) * 2;
+        return 50 * (pa / pao) * 2 + ' => Ataque muy efectivo';
       if (tpo) 
-        return 50 * (pa / pao) * 0.5;
+        return 50 * (pa / pao) * 0.5 + ' => Ataque no muy efectivo';
     },
     electrico: (pa, tpo, pao) => {
       if (tpo === 'agua')
-        return 50 * (pa / pao) * 2;
+        return 50 * (pa / pao) * 2 + ' => Ataque muy efectivo';
       if (tpo === 'hierba' || tpo === 'fuego')
-        return 50 * (pa / pao) * 1;
+        return 50 * (pa / pao) * 1 + ' => Ataque neutral';
       if (tpo)
-        return 50 * (pa / pao) * 0.5;
+        return 50 * (pa / pao) * 0.5 + ' => Ataque no muy efectivo';
     },
     hierba: (pa, tpo, pao) => {
       if (tpo === 'fuego')
-        return 50 * (pa / pao) * 0.5;
+        return 50 * (pa / pao) * 0.5 + ' => Ataque no muy efectivo';
       if (tpo === 'agua')
-        return 50 * (pa / pao) * 2;
+        return 50 * (pa / pao) * 2 + ' => Ataque muy efectivo';
       if (tpo === 'electrico')
-        return 50 * (pa / pao) * 1;
+        return 50 * (pa / pao) * 1 + ' => Ataque neutral';
       if (tpo)
-        return 50 * (pa / pao) * 0.5;
+        return 50 * (pa / pao) * 0.5 + ' => Ataque no muy efectivo';
     }
   }
 
@@ -60,4 +60,4 @@ function calcular_daño(tp, tpo, pa, pao) {
   }
 }
 
-calcular_daño("fuego", "hierba", 100, 100);
+calcular_daño("fuego", "fuego", 100, 100);
