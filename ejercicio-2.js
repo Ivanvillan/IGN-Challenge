@@ -1,4 +1,4 @@
-function ejercicio2(numero) {
+function sumaDeFactores(numero) {
 	if (numero > 1) {
 		let numA = numero;
 		let arr = Array.from(Array(numA).keys());
@@ -15,10 +15,8 @@ function ejercicio2(numero) {
 
 		for(i = 0; i < arrResult.length; i++) {
 			// Se quitan los valores repetidos
-			if(arrResult.length > 1  && arrResult[i + 1][0] == arrResult[i][1]) {
+			if(arrResult.length > 2  && arrResult[i + 1][0] == arrResult[i][1]) {
 				arrResult.splice(i + 1);
-			} else {
-				break;
 			}
 		}
 
@@ -33,4 +31,4 @@ function ejercicio2(numero) {
 	}
 }
 
-ejercicio2(12345);
+sumaDeFactores(12345);
