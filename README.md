@@ -1,2 +1,2 @@
 # ign-ejercicios
-Ejercicios resueltos con el lenguaje Javascript
+Ejercicios resueltos en Javascript
